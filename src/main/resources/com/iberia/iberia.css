@@ -1,0 +1,160 @@
+/* Iberia 1848 — sepia / engraved cartography theme */
+
+.root {
+    -fx-font-family: "Palatino Linotype", "Book Antiqua", "Georgia", serif;
+    -fx-font-size: 13px;
+    -fx-base: #d9c49a;
+    -fx-background: #ecdfc1;
+    -fx-control-inner-background: #f6eedb;
+    -fx-accent: #8a5a2b;
+    -fx-focus-color: #b8892f;
+    -fx-faint-focus-color: #b8892f22;
+    -fx-text-base-color: #3b2a1a;
+    -fx-background-color: #ecdfc1;
+}
+
+.label { -fx-text-fill: #3b2a1a; }
+
+.button {
+    -fx-background-color: #4a3220, linear-gradient(#8a5f34, #5e3d1f);
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 5, 4;
+    -fx-text-fill: #f6ead0;
+    -fx-font-weight: bold;
+    -fx-padding: 5 10 5 10;
+    -fx-cursor: hand;
+}
+.button:hover { -fx-background-color: #4a3220, linear-gradient(#a2733f, #6e4824); }
+.button:pressed { -fx-background-color: #4a3220, linear-gradient(#5e3d1f, #8a5f34); }
+.button:disabled { -fx-opacity: 0.38; }
+.button:focused { -fx-background-color: #c9a227, linear-gradient(#8a5f34, #5e3d1f); }
+
+.action-button { -fx-font-size: 12px; -fx-padding: 5 6 5 6; }
+.flow-button { -fx-background-color: #2b3e24, linear-gradient(#56794a, #34502b); }
+.flow-button:hover { -fx-background-color: #2b3e24, linear-gradient(#6a9159, #3f5f33); }
+.small-button { -fx-font-size: 11px; -fx-padding: 2 7 2 7; }
+.prompt-button { -fx-font-size: 12px; -fx-padding: 3 10 3 10; }
+
+.text-field, .choice-box, .combo-box, .spinner {
+    -fx-background-color: #6b5236, #f8f1df;
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 4, 3;
+    -fx-text-fill: #3b2a1a;
+}
+.check-box .box { -fx-background-color: #6b5236, #f8f1df; }
+.check-box:selected .mark { -fx-background-color: #6b3a14; }
+
+.list-view {
+    -fx-background-color: #6b5236, #f6eedb;
+    -fx-background-insets: 0, 1;
+}
+.list-cell { -fx-background-color: transparent; -fx-text-fill: #3b2a1a; -fx-padding: 2 6 2 6; }
+.list-cell:filled:selected { -fx-background-color: #e2cf9f; }
+.list-cell:filled:hover { -fx-background-color: #efe2bf; }
+
+.scroll-pane, .transparent-scroll, .transparent-scroll > .viewport { -fx-background-color: transparent; }
+.scroll-bar { -fx-background-color: #e4d4ae; }
+.scroll-bar .thumb { -fx-background-color: #9c7a4d; -fx-background-radius: 4; }
+
+.tooltip {
+    -fx-background-color: #f7efdc;
+    -fx-text-fill: #3b2a1a;
+    -fx-border-color: #6b5236;
+    -fx-font-size: 12px;
+    -fx-font-family: "Palatino Linotype", "Georgia", serif;
+}
+
+.context-menu { -fx-background-color: #6b5236, #f6eedb; -fx-background-insets: 0, 1; }
+.menu-item .label { -fx-text-fill: #3b2a1a; }
+.menu-item:focused { -fx-background-color: #e2cf9f; }
+
+/* ---------------------------------------------------------------- game screen */
+
+.hud {
+    -fx-background-color: linear-gradient(#e9d9b2, #d8c293);
+    -fx-border-color: transparent transparent #6b5236 transparent;
+    -fx-border-width: 0 0 2 0;
+}
+.hud-title { -fx-font-size: 16px; -fx-font-weight: bold; }
+.hud-small { -fx-font-size: 12px; -fx-text-fill: #5a4027; }
+.hud-caption { -fx-font-size: 11px; -fx-font-style: italic; -fx-text-fill: #6b5236; }
+.hud-number { -fx-font-size: 12px; -fx-font-weight: bold; }
+.hud-tiny { -fx-font-size: 10px; -fx-text-fill: #5a4027; }
+
+.side-panel {
+    -fx-background-color: linear-gradient(to right, #e3d2a8, #ecdfc1);
+    -fx-border-color: transparent transparent transparent #6b5236;
+    -fx-border-width: 0 0 0 2;
+    -fx-padding: 4;
+}
+.bottom-panel {
+    -fx-background-color: linear-gradient(#dcc79b, #e9dbb8);
+    -fx-border-color: #6b5236 transparent transparent transparent;
+    -fx-border-width: 2 0 0 0;
+}
+.panel-title { -fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #4a3220; }
+.hint { -fx-font-size: 12px; -fx-font-style: italic; -fx-text-fill: #7a5a36; }
+
+.player-row { -fx-background-color: #f3e8cd; -fx-background-radius: 6; -fx-border-color: #c4ab7a; -fx-border-radius: 6; -fx-cursor: hand; }
+.player-current { -fx-background-color: #fbefc4; -fx-border-color: #c9a227; -fx-border-width: 2; }
+.player-focused { -fx-effect: dropshadow(gaussian, #8a5a2b, 6, 0.2, 0, 0); }
+.player-name { -fx-font-weight: bold; -fx-font-size: 13px; }
+.player-info { -fx-font-size: 11px; -fx-text-fill: #6b5236; }
+.player-offline { -fx-font-size: 10px; -fx-text-fill: #a3261c; -fx-font-style: italic; }
+
+.prompt-bar {
+    -fx-background-color: rgba(246, 236, 210, 0.95);
+    -fx-background-radius: 8;
+    -fx-border-color: #6b5236;
+    -fx-border-radius: 8;
+    -fx-border-width: 1.5;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0.1, 0, 2);
+}
+.prompt-label { -fx-font-size: 13.5px; -fx-font-weight: bold; -fx-text-fill: #3b2a1a; }
+.toast {
+    -fx-background-color: rgba(120, 25, 18, 0.92);
+    -fx-text-fill: #fff4ea;
+    -fx-padding: 8 14 8 14;
+    -fx-background-radius: 6;
+    -fx-font-weight: bold;
+}
+
+.card { -fx-cursor: default; }
+.card-new { -fx-effect: dropshadow(gaussian, #ffcf33, 12, 0.4, 0, 0); }
+
+.gameover-box {
+    -fx-background-color: linear-gradient(#f7eed6, #e6d2a2);
+    -fx-background-radius: 12;
+    -fx-border-color: #4a3220;
+    -fx-border-width: 3;
+    -fx-border-radius: 12;
+    -fx-padding: 26;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 20, 0.2, 0, 4);
+}
+.gameover-win { -fx-font-size: 40px; -fx-font-weight: bold; -fx-text-fill: #2f6b2a; }
+.gameover-lose { -fx-font-size: 40px; -fx-font-weight: bold; -fx-text-fill: #8e1d14; }
+.gameover-reason { -fx-font-size: 15px; -fx-text-alignment: center; }
+
+/* ---------------------------------------------------------------- menu & lobby */
+
+.menu-panel, .lobby-panel {
+    -fx-background-color: rgba(245, 235, 208, 0.94);
+    -fx-background-radius: 14;
+    -fx-border-color: #4a3220;
+    -fx-border-width: 2.5;
+    -fx-border-radius: 14;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.45), 18, 0.15, 0, 4);
+}
+.menu-title { -fx-font-size: 46px; -fx-font-weight: bold; -fx-text-fill: #4a3220; }
+.menu-subtitle { -fx-font-size: 15px; -fx-font-style: italic; -fx-text-fill: #6b5236; }
+.section-title { -fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #4a3220; }
+.status-error { -fx-text-fill: #a3261c; -fx-font-weight: bold; }
+.status-ok { -fx-text-fill: #2f6b2a; }
+.seat-row { -fx-background-color: #f3e8cd; -fx-background-radius: 6; -fx-border-color: #c4ab7a; -fx-border-radius: 6; -fx-padding: 6 10 6 10; }
+.big-button { -fx-font-size: 15px; -fx-padding: 8 18 8 18; }
+
+.iberia-dialog { -fx-background-color: #ecdfc1; }
+.iberia-dialog .header-panel { -fx-background-color: #dcc79b; }
+.iberia-dialog .header-panel .label { -fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #3b2a1a; }
+.dialog-pane { -fx-background-color: #ecdfc1; }
+.dialog-pane .header-panel { -fx-background-color: #dcc79b; }
